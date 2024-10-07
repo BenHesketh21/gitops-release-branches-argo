@@ -18,4 +18,4 @@ env:
   tenant: yoga
 
 newEnvs:
-  enabled: true
+  enabled: false

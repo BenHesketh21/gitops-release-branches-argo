@@ -26,14 +26,22 @@ jobs:
     - run: |
         mkdir pr/render
         mkdir target/render
-        helm template tenant1-app1 pr/charts/app1 -f pr/charts/app1/values.yaml -f pr/charts/app1/values/test/base.yml -f pr/charts/app1/values/test/main/tenant1/version.yml | helm-fan-out ./pr/render
-        helm template tenant1-app1 target/charts/app1 -f target/charts/app1/values.yaml -f target/charts/app1/values/test/base.yml -f target/charts/app1/values/test/main/tenant1/version.yml | helm-fan-out ./target/render
-        diff -Uqr 7 target/render pr/render > tenant1-app1-changes.diff || true
+        helm template tenant1-app1 pr/charts/app1 -f pr/charts/app1/values.yaml -f pr/charts/app1/values/test/base.yml -f pr/charts/app1/values/test/main/tenant1/version.yml | ./pr/helm-fan-out ./pr/render
+        helm template tenant1-app1 target/charts/app1 -f target/charts/app1/values.yaml -f target/charts/app1/values/test/base.yml -f target/charts/app1/values/test/main/tenant1/version.yml | ./target/helm-fan-out ./target/render
+        diff -rN -U 7 target/render pr/render | sed -E 's@.*\/(.*\/.*(.yaml|.yml))$@====\ \1\ ====@g' | sed 's@.*\/(.*\/.*(.yaml|.yml)).*@@g' > tenant1-app1-changes.diff || true
+        rm -rf pr/render/*
+        rm -rf target/render/*
+        helm template tenant2-app1 pr/charts/app1 -f pr/charts/app1/values.yaml -f pr/charts/app1/values/test/base.yml -f pr/charts/app1/values/test/main/tenant2/version.yml | ./pr/helm-fan-out ./pr/render
+        helm template tenant2-app1 target/charts/app1 -f target/charts/app1/values.yaml -f target/charts/app1/values/test/base.yml -f target/charts/app1/values/test/main/tenant2/version.yml | ./target/helm-fan-out ./target/render
+        diff -rN -U 7 target/render pr/render | sed -E 's@.*\/(.*\/.*(.yaml|.yml))$@====\ \1\ ====@g' | sed 's@.*\/(.*\/.*(.yaml|.yml)).*@@g' > tenant2-app1-changes.diff || true
     - run: |
         wget https://raw.githubusercontent.com/kostis-codefresh/kustomize-github-preview-diff/main/pr-comment-template.txt
         sed  's/DESCRIPTION_HERE/tenant1-app1/g' pr-comment-template.txt > tenant1-app1-diff.txt
         sed  -e "/DIFF_HERE/{r tenant1-app1-changes.diff" -e "d}" tenant1-app1-diff.txt > tenant1-app1-result.txt
+        sed  's/DESCRIPTION_HERE/tenant2-app1/g' pr-comment-template.txt > tenant2-app1-diff.txt
+        sed  -e "/DIFF_HERE/{r tenant2-app1-changes.diff" -e "d}" tenant2-app1-diff.txt > tenant2-app1-result.txt
         cat tenant1-app1-result.txt > comment.txt
+        cat tenant2-app1-result.txt >> comment.txt
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
       with:

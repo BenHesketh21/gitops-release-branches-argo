@@ -1,30 +1,28 @@
 ---
-# Source: app1/templates/deployment.yaml
+# Source: app2/templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app1
+  name: app2
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: app1
+      app: app2
   template:
     metadata:
       labels:
-        app: app1
+        app: app2
     spec:
       containers:
-        - name: app1
-          image: "ghcr.io/benhesketh21/app1:main-14151239633"
+        - name: app2
+          image: "ghcr.io/benhesketh21/app2:main-9275216837"
           imagePullPolicy: IfNotPresent
           env:
           - name: TENANT
             value: yoga
           - name: ENV
             value: test
-          - name: BOOM
-            value: hello
           ports:
             - name: http
               containerPort: 80

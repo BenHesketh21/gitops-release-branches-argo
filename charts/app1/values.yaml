@@ -8,7 +8,7 @@ image:
   repository: app1
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "main-8960719674"
+  tag: "main-14550437356"
 service:
   type: ClusterIP
   port: 80

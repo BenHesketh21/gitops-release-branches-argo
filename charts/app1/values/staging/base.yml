@@ -1,2 +1,4 @@
 env:
   name: staging
+image:
+  tag: 'v1.0.1-9181255550'

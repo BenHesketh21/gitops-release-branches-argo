@@ -14,7 +14,7 @@ spec:
       path: charts/app1
     syncSource:
       targetBranch: gitops-promoter/test/main/tenant1
-      path: render/test/main/tenant1/app1
+      path: render/
     hydrateTo:
       targetBranch: candidate/gitops-promoter/test/main/tenant1
   destination:

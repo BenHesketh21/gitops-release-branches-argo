@@ -13,3 +13,5 @@ server:
   service:
     nodePortHttp: 30080
     type: NodePort
+commitServer:
+  enabled: true

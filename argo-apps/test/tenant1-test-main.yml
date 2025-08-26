@@ -13,10 +13,10 @@ spec:
       targetRevision: HEAD
       path: charts/app1
     syncSource:
-      targetBranch: gitops-promoter/test/main/tenant1
+      targetBranch: gitops-promoter/test/main/tenant1/app1
       path: charts/app1
     hydrateTo:
-      targetBranch: candidate/gitops-promoter/test/main/tenant1
+      targetBranch: candidate/gitops-promoter/test/main/tenant1/app1
   destination:
     server: https://kubernetes.default.svc
     namespace: tenant1-test-main
@@ -25,29 +25,29 @@ spec:
     syncOptions:
       - CreateNamespace=true
 ---
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: app2-tenant1-test-main
-#   namespace: argocd
-#   annotations:
-#     kargo.akuity.io/authorized-stage: test-main:tenant1-test-main
-# spec:
-#   project: default
-#   source:
-#     repoURL: https://github.com/BenHesketh21/gitops-release-branches-argo.git
-#     targetRevision: HEAD
-#     path: charts/app2
-#     helm:
-#       releaseName: tenant1-app2
-#       valueFiles:
-#       - values.yaml
-#       - values/test/base.yml
-#       - values/test/main/tenant1/version.yml
-#   destination:
-#     server: https://kubernetes.default.svc
-#     namespace: tenant1-test-main
-#   syncPolicy:
-#     automated: {}
-#     syncOptions:
-#       - CreateNamespace=true
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2-tenant1-test-main
+  namespace: argocd
+  annotations:
+    kargo.akuity.io/authorized-stage: test-main:tenant1-test-main
+spec:
+  project: default
+  sourceHydrator:
+    drySource:
+      repoURL: https://github.com/BenHesketh21/gitops-release-branches-argo.git
+      targetRevision: HEAD
+      path: charts/app2
+    syncSource:
+      targetBranch: gitops-promoter/test/main/tenant1/app2
+      path: charts/app2
+    hydrateTo:
+      targetBranch: candidate/gitops-promoter/test/main/tenant1/app2
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tenant1-test-main
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true

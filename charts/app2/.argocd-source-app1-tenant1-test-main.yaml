@@ -1,0 +1,6 @@
+helm:
+  releaseName: tenant1-app2
+  valueFiles:
+  - values.yaml
+  - values/test/base.yml
+  - values/test/main/tenant1/version.yml

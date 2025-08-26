@@ -1,0 +1,15 @@
+configs:
+  params:
+    application.namespaces: '*'
+    hydrator.enabled: 'true'
+  secret:
+    argocdServerAdminPassword: $2a$10$5vm8wXaSdbuff0m9l21JdevzXBzJFPCi8sy6OOnpZMAG.fOXL7jvO
+server:
+  extensions:
+    contents:
+      - name: argo-rollouts
+        url: https://github.com/argoproj-labs/rollout-extension/releases/download/v0.3.3/extension.tar
+    enabled: true
+  service:
+    nodePortHttp: 30080
+    type: NodePort

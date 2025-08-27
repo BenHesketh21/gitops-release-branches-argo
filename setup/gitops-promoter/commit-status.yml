@@ -1,0 +1,21 @@
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: ArgoCDCommitStatus
+metadata:
+  name: argocd-health
+spec:
+  promotionStrategyRef:
+    name: demo-github-app1
+  applicationSelector:
+    matchLabels:
+      app-name: app1-tenant1
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: ArgoCDCommitStatus
+metadata:
+  name: argocd-health
+spec:
+  promotionStrategyRef:
+    name: demo-github-app2
+  applicationSelector:
+    matchLabels:
+      app-name: app2-tenant1

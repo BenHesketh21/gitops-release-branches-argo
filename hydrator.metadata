@@ -1,0 +1,7 @@
+{
+  "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
+  "drySha": "009440dd002a5c53932ce9aafad2ca444468e2a9",
+  "author": "Ben Hesketh <heskethben0@gmail.com>",
+  "date": "2025-08-27T19:26:36Z",
+  "subject": "Update values.yaml"
+}

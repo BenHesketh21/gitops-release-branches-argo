@@ -1,8 +1,7 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "139c7dd7343d95e2f7dd95b99f7cef47f678ce44",
-  "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-08-27T19:23:47Z",
-  "subject": "adding gitops promoter config",
-  "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
+  "drySha": "009440dd002a5c53932ce9aafad2ca444468e2a9",
+  "author": "Ben Hesketh <heskethben0@gmail.com>",
+  "date": "2025-08-27T19:26:36Z",
+  "subject": "Update values.yaml"
 }

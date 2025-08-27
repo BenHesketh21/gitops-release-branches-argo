@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: app2-tenant1-test-main:apps/Deployment:/app2
+  name: app2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app2
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      containers:
+        - env:
+            - name: TENANT
+              value: yoga
+            - name: ENV
+              value: test
+          image: ghcr.io/benhesketh21/app2:main-9275216837
+          imagePullPolicy: IfNotPresent
+          name: app2
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP

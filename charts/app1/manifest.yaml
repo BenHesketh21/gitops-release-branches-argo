@@ -5,7 +5,7 @@ metadata:
     argocd.argoproj.io/tracking-id: app1-tenant1-test-main:apps/Deployment:/app1
   name: app1
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: app1

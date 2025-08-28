@@ -5,8 +5,6 @@ metadata:
   namespace: argocd
   labels:
     app-name: app1-tenant1
-  annotations:
-    kargo.akuity.io/authorized-stage: staging:tenant1-staging
 spec:
   project: default
   sourceHydrator:
@@ -34,8 +32,6 @@ metadata:
   namespace: argocd
   labels:
     app-name: app2-tenant1
-  annotations:
-    kargo.akuity.io/authorized-stage: staging:tenant1-staging
 spec:
   project: default
   sourceHydrator:
@@ -47,7 +43,7 @@ spec:
       targetBranch: gitops-promoter/staging/main/tenant1/app2
       path: charts/app2
     hydrateTo:
-      targetBranch: candidate/gitops-promoter/staging/main/tenant1/app2
+      targetBranch: gitops-promoter/staging/main/tenant1/app2-next
   destination:
     server: https://kubernetes.default.svc
     namespace: tenant1-staging

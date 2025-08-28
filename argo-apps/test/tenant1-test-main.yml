@@ -5,8 +5,6 @@ metadata:
   namespace: argocd
   labels:
     app-name: app1-tenant1
-  annotations:
-    kargo.akuity.io/authorized-stage: test-main:tenant1-test-main
 spec:
   project: default
   sourceHydrator:
@@ -34,8 +32,6 @@ metadata:
   namespace: argocd
   labels:
     app-name: app2-tenant1
-  annotations:
-    kargo.akuity.io/authorized-stage: test-main:tenant1-test-main
 spec:
   project: default
   sourceHydrator:

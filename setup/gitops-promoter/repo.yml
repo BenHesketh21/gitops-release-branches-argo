@@ -1,7 +1,8 @@
 apiVersion: promoter.argoproj.io/v1alpha1
 kind: GitRepository
 metadata:
-  name: github-argocd-example-apps
+  name: gitops-release-branches-argo
+  namespace: promoter-system
 spec:
   github:
     owner: BenHesketh21

@@ -2,30 +2,31 @@ apiVersion: promoter.argoproj.io/v1alpha1
 kind: PromotionStrategy
 metadata:
   name: demo-github-app1
+  namespace: promoter-system
 spec:
   activeCommitStatuses:
   # The ArgoCDCommitStatus CR will maintain this commit status based on the application health.
   - key: argocd-health
   environments:
-    - autoMerge: true
+    - autoMerge: false
       branch: gitops-promoter/test/main/tenant1/app1
-    - autoMerge: true
+    - autoMerge: false
       branch: gitops-promoter/staging/main/tenant1/app1
   gitRepositoryRef:
-    name: github-argocd-example-apps
+    name: gitops-release-branches-argo
 ---
-apiVersion: promoter.argoproj.io/v1alpha1
-kind: PromotionStrategy
-metadata:
-  name: demo-github-app2
-spec:
-  activeCommitStatuses:
-  # The ArgoCDCommitStatus CR will maintain this commit status based on the application health.
-  - key: argocd-health
-  environments:
-    - autoMerge: true
-      branch: gitops-promoter/test/main/tenant1/app2
-    - autoMerge: true
-      branch: gitops-promoter/staging/main/tenant1/app2
-  gitRepositoryRef:
-    name: github-argocd-example-apps
+# apiVersion: promoter.argoproj.io/v1alpha1
+# kind: PromotionStrategy
+# metadata:
+#   name: demo-github-app2
+# spec:
+#   activeCommitStatuses:
+#   # The ArgoCDCommitStatus CR will maintain this commit status based on the application health.
+#   - key: argocd-health
+#   environments:
+#     - autoMerge: true
+#       branch: gitops-promoter/test/main/tenant1/app2
+#     - autoMerge: true
+#       branch: gitops-promoter/staging/main/tenant1/app2
+#   gitRepositoryRef:
+#     name: gitops-release-branches-argo

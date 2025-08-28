@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: app1-tenant1-staging:apps/Deployment:/app1
+  name: app1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app1
+  template:
+    metadata:
+      labels:
+        app: app1
+    spec:
+      containers:
+        - env:
+            - name: TENANT
+              value: yoga
+            - name: ENV
+              value: staging
+            - name: BOOM
+              value: hello
+          image: ghcr.io/benhesketh21/app1:v1.0.1-9181255550
+          imagePullPolicy: IfNotPresent
+          name: app1
+          ports:
+            - containerPort: 8082
+              name: http
+              protocol: TCP

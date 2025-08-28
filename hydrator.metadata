@@ -1,7 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "2c310f54111388389040d8a5f575ce5921e463e4",
-  "author": "Ben Hesketh <heskethben0@gmail.com>",
-  "date": "2025-08-27T21:43:42Z",
-  "subject": "Update values.yaml"
+  "drySha": "da0b264556da159c34c47a3ddffb5b805635b4ea",
+  "author": "BenHesketh21 <heskethben0@gmail.com>",
+  "date": "2025-08-28T06:46:15Z",
+  "subject": "chart change",
+  "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

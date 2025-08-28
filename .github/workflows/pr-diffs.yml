@@ -35,6 +35,6 @@ jobs:
         sed  -e "/DIFF_HERE/{r tenant1-app1-changes.diff" -e "d}" tenant1-app1-diff.txt > tenant1-app1-result.txt
         cat tenant1-app1-result.txt > comment.txt
     - name: PR comment with file
-      uses: thollander/actions-comment-pull-request@v2
+      uses: thollander/actions-comment-pull-request@v3
       with:
         filePath: comment.txt

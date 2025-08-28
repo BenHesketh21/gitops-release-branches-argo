@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "880251754298b1d07005f9e0c0a91cac3e61093d",
+  "drySha": "7cf991ffaae79f2cbc5340ecb1f100c4d56f2b5b",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-08-28T07:13:56Z",
-  "subject": "remove diff workflow",
+  "date": "2025-08-28T07:20:45Z",
+  "subject": "adding renovate config for oci images",
   "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

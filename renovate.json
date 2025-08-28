@@ -1,81 +1,34 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
-  "helmv3": {
-    "fileMatch": [
-      "charts/**/values*.yaml",
-      "charts/**/values*.yml",
-      "charts/**/values/**/*.yml",
-      "charts/**/values/**/*.yaml"
-    ]
-  },
+  "extends": ["config:base"],
   "regexManagers": [
     {
-      "fileMatch": [
-        "charts\/.*\/values.*\\.yaml",
-        "charts\/.*\/values.*\\.yml",
-        "charts\/.*\/values\/.*\/.*\\.yml",
-        "charts\/.*\/values\/.*\/.*\\.yaml"
-      ],
-      "matchStrings": [
-        "registry:\\s+(?<registry>ghcr\\.io\/[^\\n]+)\\n\\s*repository:\\s+(?<depName>[^\\n]+)\\n[\\s\\S]*?tag:\\s+[\"']?(?<currentValue>[^\"'\\n]+)[\"']?",
-        "tag:\\s+[\"']?(?<currentValue>[^\"'\\n]+)[\"']?\\s*#\\s*renovate:\\s*(?<registry>[^\\s]+)\/(?<depName>[^\\s]+)"
-      ],
+      "fileMatch": ["^charts/app1/values/test/values\\.ya?ml$"],
+      "matchStrings": ["tag:\\s*(?<currentValue>main-[0-9]+)"],
+      "depNameTemplate": "myregistry/app1",
       "datasourceTemplate": "docker",
-      "registryUrlTemplate": "https://{{registry}}",
-      "depNameTemplate": "{{registry}}/{{depName}}"
-    }
-  ],
-  "packageRules": [
-    {
-      "description": "Test environment - track main-* tags",
-      "matchFileNames": ["**/values/test/**"],
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/benhesketh21/**"],
-      "versioning": "regex:^main-(?<major>\\d+)$",
-      "extractVersion": "^main-(?<version>.*)$",
-      "automerge": true,
-      "labels": ["test-env", "main-branch-update"],
-      "rangeStrategy": "replace"
+      "versioningTemplate": "regex:^main-(?<build>\\d+)$"
     },
     {
-      "description": "Staging/Prod environments - track semver tags",
-      "matchFileNames": ["**/values/staging/**", "**/values/prod/**"],
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/benhesketh21/**"],
-      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-(?<prerelease>.*))?$",
-      "separateMinorPatch": true,
-      "rangeStrategy": "replace"
+      "fileMatch": ["^charts/app1/values/(staging|production)/values\\.ya?ml$"],
+      "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
+      "depNameTemplate": "myregistry/app1",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "semver"
     },
     {
-      "description": "Staging/Prod - Major version updates need approval",
-      "matchFileNames": ["**/values/staging/**", "**/values/prod/**"],
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/benhesketh21/**"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "labels": ["staging-prod", "major-update"]
+      "fileMatch": ["^charts/app2/values/test/values\\.ya?ml$"],
+      "matchStrings": ["tag:\\s*(?<currentValue>main-[0-9]+)"],
+      "depNameTemplate": "myregistry/app2",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "regex:^main-(?<build>\\d+)$"
     },
     {
-      "description": "Staging/Prod - Minor/patch updates can auto-merge",
-      "matchFileNames": ["**/values/staging/**", "**/values/prod/**"],
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/benhesketh21/**"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true,
-      "labels": ["staging-prod", "minor-patch-update"]
-    },
-    {
-      "description": "Default values.yaml files - use semver for safety",
-      "matchFileNames": ["**/values.yaml", "**/values.yml"],
-      "excludeFileNames": ["**/values/test/**", "**/values/staging/**", "**/values/prod/**"],
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/benhesketh21/**"],
-      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-(?<prerelease>.*))?$",
-      "automerge": false,
-      "labels": ["default-values"]
+      "fileMatch": ["^charts/app2/values/(staging|production)/values\\.ya?ml$"],
+      "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
+      "depNameTemplate": "myregistry/app2",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "semver"
     }
   ]
 }

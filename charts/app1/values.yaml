@@ -11,7 +11,7 @@ image:
   tag: "main-14550437356"
 service:
   type: ClusterIP
-  port: 8081
+  port: 8082
 
 env:
   name: test

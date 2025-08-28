@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "da0b264556da159c34c47a3ddffb5b805635b4ea",
-  "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-08-28T06:46:15Z",
-  "subject": "chart change",
-  "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
+  "drySha": "f5717422c09ecfb067e65760657d862812c95824",
+  "author": "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+  "date": "2025-08-28T07:08:23Z",
+  "subject": "Add renovate.json (#122)",
+  "body": "Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\n"
 }

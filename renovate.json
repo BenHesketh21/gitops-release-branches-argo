@@ -14,10 +14,10 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "charts/**/values*.yaml",
-        "charts/**/values*.yml",
-        "charts/**/values/**/*.yml",
-        "charts/**/values/**/*.yaml"
+        "charts\/.*\/values.*\\.yaml",
+        "charts\/.*\/values.*\\.yml",
+        "charts\/.*\/values\/.*\/.*\\.yml",
+        "charts\/.*\/values\/.*\/.*\\.yaml"
       ],
       "matchStrings": [
         "registry:\\s+(?<registry>ghcr\\.io\/[^\\n]+)\\n\\s*repository:\\s+(?<depName>[^\\n]+)\\n[\\s\\S]*?tag:\\s+[\"']?(?<currentValue>[^\"'\\n]+)[\"']?",

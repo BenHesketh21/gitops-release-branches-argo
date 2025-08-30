@@ -7,7 +7,7 @@
       "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
       "depNameTemplate": "ghcr.io/benhesketh21/app1",
       "datasourceTemplate": "docker",
-      "versioningTemplate": "regex:^main-(\\d+)$"
+      "versioningTemplate": "regex:^main-(?<build>\\d+)$"
     },
     {
       "fileMatch": ["^charts/app1/values/(staging|prod)/.+\\.ya?ml$"],

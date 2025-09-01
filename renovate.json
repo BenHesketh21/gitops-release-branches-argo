@@ -5,8 +5,9 @@
     "commitMessageTopic": "helm values {{depName}}",
     "managerFilePatterns": [
       "/(^|/)values\\.ya?ml$/",
-      "/(^|/)values/test/.+\\.ya?ml$/"
+      "/charts/.+/values/test/.+/(.+\\.ya?ml)$/"
     ],
+      "versioningTemplate": "regex:^main-(?<build>\\d+)$",
     "pinDigests": false
   }
 }

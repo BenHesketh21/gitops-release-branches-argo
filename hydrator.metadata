@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "2d5c882aa9d838161f32ab99d2d8a5e04a1355e1",
+  "drySha": "ff6add039bec9a509dcb8b42929b05b9f2709116",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-09-01T19:26:04Z",
-  "subject": "disable helm-values",
+  "date": "2025-09-01T19:29:57Z",
+  "subject": "adding subfolder",
   "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

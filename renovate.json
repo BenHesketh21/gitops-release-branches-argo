@@ -7,7 +7,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": ["charts/**/values/test/**/*.yaml)"],
+      "managerFilePatterns": ["charts/app1/values/test/**/*.yaml)"],
       "matchStrings": [
         "tag: (?<currentValue>\\S+)"
       ],

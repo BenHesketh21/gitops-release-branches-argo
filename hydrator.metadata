@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "2e7a8f3e3d8c8e1b97c8fec4b733fe06d1908260",
+  "drySha": "f4cefbcbd0ce04776f435747d283b267a1827d53",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-09-01T19:44:36Z",
-  "subject": "trying default helm values",
+  "date": "2025-09-01T19:52:46Z",
+  "subject": "removing default",
   "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

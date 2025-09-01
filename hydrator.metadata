@@ -1,8 +1,7 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "7335d689ecbbfa123a7dba8e7ecd8df993783ac2",
-  "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-08-28T07:25:36Z",
-  "subject": "fix renovate config",
-  "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
+  "drySha": "140c5c71192c0d4dfa94c8493ebcfb24a159b869",
+  "author": "Ben Hesketh <heskethben0@gmail.com>",
+  "date": "2025-08-30T23:04:35Z",
+  "subject": "Update renovate.json"
 }

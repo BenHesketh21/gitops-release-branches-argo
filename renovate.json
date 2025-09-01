@@ -4,13 +4,14 @@
   "helm-values": {
     "enabled": false
   },
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^charts/app1/values/test/.+\\.ya?ml$"],
-      "matchStrings": ["image:\\s*tag:\\s*(?<currentValue>\"?[\\w.-]+\"?)"],
-      "depNameTemplate": "ghcr.io/benhesketh21/app1",
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
-    } 
+      "customType": "regex",
+      "managerFilePatterns": ["charts/.+/values/test/.+/(.+\\.ya?ml)$"],
+      "matchStrings": [
+        "tag: (?<currentValue>\\S+)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+    }
   ]
 }

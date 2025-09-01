@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "d683469a15fb1a8a2338076343da2b643cd806d6",
+  "drySha": "7ae80af610361900439f703625b79b1e3bb30d81",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-09-01T20:18:54Z",
-  "subject": "fix regex",
+  "date": "2025-09-01T20:24:57Z",
+  "subject": "trying fix",
   "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

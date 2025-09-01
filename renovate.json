@@ -12,7 +12,8 @@
         "tag: (?<currentValue>\\S+)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "docker",
+      "depName": "ghcr.io/benhesketh21/app1"
     }
   ]
 }

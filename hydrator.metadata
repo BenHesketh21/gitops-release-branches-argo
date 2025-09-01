@@ -1,8 +1,7 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "dc79d8ed400804cedf9c97aa819a5914badfe34c",
+  "drySha": "04c6e2e539c08c6b686dd5c5928345bd14d179de",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-09-01T20:43:28Z",
-  "subject": "fix ignore paths",
-  "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
+  "date": "2025-09-01T20:47:28Z",
+  "subject": "test: use standard nginx version for renovate testing"
 }

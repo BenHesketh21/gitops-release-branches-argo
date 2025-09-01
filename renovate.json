@@ -6,12 +6,22 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["\\.ya?ml$"],
+      "fileMatch": ["charts/app1/values/test/.+\\.ya?ml$"],
       "matchStrings": [
         "tag:\\s*(?<currentValue>\\S+)"
       ],
       "datasourceTemplate": "docker",
-      "depNameTemplate": "nginx"
+      "depNameTemplate": "ghcr.io/benhesketh21/app1",
+      "versioningTemplate": "loose"
+    },
+    {
+      "fileMatch": ["charts/app2/values/test/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*(?<currentValue>\\S+)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app2",
+      "versioningTemplate": "loose"
     }
   ],
   "ignorePaths": [

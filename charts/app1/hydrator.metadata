@@ -1,6 +1,6 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "0b408935950397107cf0be8ad82a6b69e0b600a8",
+  "drySha": "02310bcf1f945d61dc2b133874bef507bdc111d6",
   "commands": [
     "helm template . --name-template tenant1-app1 --values ./charts/app1/values.yaml --values ./charts/app1/values/staging/base.yml --include-crds"
   ]

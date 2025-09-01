@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "0b408935950397107cf0be8ad82a6b69e0b600a8",
+  "drySha": "02310bcf1f945d61dc2b133874bef507bdc111d6",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-09-01T19:34:32Z",
-  "subject": "revert",
+  "date": "2025-09-01T19:38:43Z",
+  "subject": "just adding one for main app1",
   "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

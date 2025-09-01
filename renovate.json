@@ -1,13 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "helm-values": {
     "enabled": false
   },
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^charts/app1/values/test/.+\\.ya?ml$"],
+      "fileMatch": ["charts/app1/values/test/.+\\.ya?ml$"],
       "matchStrings": [
         "tag:\\s*(?<currentValue>\\S+)"
       ],
@@ -16,7 +16,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^charts/app2/values/test/.+\\.ya?ml$"],
+      "fileMatch": ["charts/app2/values/test/.+\\.ya?ml$"],
       "matchStrings": [
         "tag:\\s*(?<currentValue>\\S+)"
       ],

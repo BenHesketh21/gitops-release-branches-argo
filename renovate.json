@@ -1,12 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
-  "helm-values":{
-    "commitMessageTopic": "helm values {{depName}}",
-    "managerFilePatterns": [
-      "charts/.+/values/test/.+/(.+\\.ya?ml)$"
-    ],
-      "versioningTemplate": "regex:^main-(?<build>\\d+)$",
-    "pinDigests": false
-  }
+  "helm-values": {
+    "enabled": false
+  },
+  "regexManagers": [
+    {
+      "fileMatch": ["^charts/app1/values/test/.+\\.ya?ml$"],
+      "matchStrings": ["image:\\s*tag:\\s*(?<currentValue>\"?[\\w.-]+\"?)"],
+      "depNameTemplate": "ghcr.io/benhesketh21/app1",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
+    } 
+  ]
 }

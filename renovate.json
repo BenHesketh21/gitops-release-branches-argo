@@ -13,7 +13,7 @@
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "datasourceTemplate": "docker",
-      "depName": "ghcr.io/benhesketh21/app1"
+      "depNameTemplate": "ghcr.io/benhesketh21/app1"
     }
   ]
 }

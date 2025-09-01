@@ -6,7 +6,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["(^|/)charts/app1/values/test/.+\\.ya?ml$"],
+      "fileMatch": ["charts/app1/values/test/.+\\.ya?ml$"],
       "matchStrings": [
         "tag:\\s*(?<currentValue>\\S+)"
       ],
@@ -14,7 +14,7 @@
       "depNameTemplate": "nginx"
     },
     {
-      "fileMatch": ["(^|/)charts/app2/values/test/.+\\.ya?ml$"],
+      "fileMatch": ["charts/app2/values/test/.+\\.ya?ml$"],
       "matchStrings": [
         "tag:\\s*(?<currentValue>\\S+)"
       ],

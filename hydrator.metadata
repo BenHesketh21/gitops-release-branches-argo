@@ -1,8 +1,7 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "7cf991ffaae79f2cbc5340ecb1f100c4d56f2b5b",
-  "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-08-28T07:20:45Z",
-  "subject": "adding renovate config for oci images",
-  "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
+  "drySha": "140c5c71192c0d4dfa94c8493ebcfb24a159b869",
+  "author": "Ben Hesketh <heskethben0@gmail.com>",
+  "date": "2025-08-30T23:04:35Z",
+  "subject": "Update renovate.json"
 }

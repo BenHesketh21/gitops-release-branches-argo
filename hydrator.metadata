@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "dfeae72de45a076fc943ec3014f1081c11ddd6e7",
+  "drySha": "2d5c882aa9d838161f32ab99d2d8a5e04a1355e1",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-09-01T19:21:03Z",
-  "subject": "adding auto replace template",
+  "date": "2025-09-01T19:26:04Z",
+  "subject": "disable helm-values",
   "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

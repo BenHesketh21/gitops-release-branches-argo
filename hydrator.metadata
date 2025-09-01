@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/BenHesketh21/gitops-release-branches-argo",
-  "drySha": "ff6add039bec9a509dcb8b42929b05b9f2709116",
+  "drySha": "0b408935950397107cf0be8ad82a6b69e0b600a8",
   "author": "BenHesketh21 <heskethben0@gmail.com>",
-  "date": "2025-09-01T19:29:57Z",
-  "subject": "adding subfolder",
+  "date": "2025-09-01T19:34:32Z",
+  "subject": "revert",
   "body": "Signed-off-by: BenHesketh21 <heskethben0@gmail.com>\n"
 }

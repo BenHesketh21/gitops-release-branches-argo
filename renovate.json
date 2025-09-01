@@ -9,33 +9,7 @@
       "fileMatch": ["^charts/app1/values/test/.+\\.ya?ml$"],
       "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
       "depNameTemplate": "ghcr.io/benhesketh21/app1",
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "regex:^main-(?<build>\\d+)$",
-      "autoReplaceStringTemplate": "{{newValue}}"
-    },
-    {
-      "fileMatch": ["^charts/app1/values/(staging|prod)/.+\\.ya?ml$"],
-      "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
-      "depNameTemplate": "ghcr.io/benhesketh21/app1",
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "semver",
-      "autoReplaceStringTemplate": "{{newValue}}"
-    },
-    {
-      "fileMatch": ["^charts/app2/values/test/.+/.+\\.ya?ml$"],
-      "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
-      "depNameTemplate": "ghcr.io/benhesketh21/app2",
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "regex:^main-(?<build>\\d+)$",
-      "autoReplaceStringTemplate": "{{newValue}}"
-    },
-    {
-      "fileMatch": ["^charts/app2/values/(staging|prod)/.+\\.ya?ml$"],
-      "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
-      "depNameTemplate": "ghcr.io/benhesketh21/app2",
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "semver",
-      "autoReplaceStringTemplate": "{{newValue}}"
+      "datasourceTemplate": "docker"
     }
   ]
 }

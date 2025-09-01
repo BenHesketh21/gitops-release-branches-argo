@@ -6,7 +6,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["charts/app1/values/test/**/*.yaml"],
+      "fileMatch": ["charts/.+/values/test/.+/(.+\\.ya?ml)$"],
       "matchStrings": [
         "tag:\\s*(?<currentValue>\\S+)"
       ],

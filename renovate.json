@@ -6,7 +6,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["^charts/app1/values/test/.+/.+\\.ya?ml$"],
+      "fileMatch": ["^charts/app1/values/test/.+\\.ya?ml$"],
       "matchStrings": ["tag:\\s*(?<currentValue>\\S+)"],
       "depNameTemplate": "ghcr.io/benhesketh21/app1",
       "datasourceTemplate": "docker",

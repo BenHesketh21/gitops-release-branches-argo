@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
+  "helm-values": {
+    "enabled": false
+  },
   "regexManagers": [
     {
       "fileMatch": ["^charts/app1/values/test/.+\\.ya?ml$"],

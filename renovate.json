@@ -11,7 +11,8 @@
       "matchStrings": [
         "tag: (?<currentValue>\\S+)"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "datasourceTemplate": "docker"
     }
   ]
 }

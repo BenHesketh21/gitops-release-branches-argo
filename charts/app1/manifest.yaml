@@ -22,7 +22,7 @@ spec:
               value: test
             - name: BOOM
               value: hello
-          image: ghcr.io/benhesketh21/app1:1.20.1
+          image: ghcr.io/benhesketh21/app1:main-11922033263
           imagePullPolicy: IfNotPresent
           name: app1
           ports:

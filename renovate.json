@@ -12,7 +12,7 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "ghcr.io/benhesketh21/app1",
-      "versioningTemplate": "loose"
+      "versioningTemplate": "regex:^(?<major>main)-(?<minor>\\d+)$"
     },
     {
       "fileMatch": ["charts/app2/values/test/.+\\.ya?ml$"],
@@ -21,7 +21,7 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "ghcr.io/benhesketh21/app2",
-      "versioningTemplate": "loose"
+      "versioningTemplate": "regex:^(?<major>main)-(?<minor>\\d+)$"
     }
   ],
   "ignorePaths": [

@@ -22,6 +22,78 @@
       "datasourceTemplate": "docker",
       "depNameTemplate": "ghcr.io/benhesketh21/app2",
       "versioningTemplate": "regex:^(?:main-(?<major>\\d+)|v(?<vmajor>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+))$"
+    },
+    {
+      "fileMatch": ["charts/app1/values/staging/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app1",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "fileMatch": ["charts/app1/values/prod/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app1",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "fileMatch": ["charts/app2/values/staging/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app2",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "fileMatch": ["charts/app2/values/prod/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app2",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "fileMatch": ["charts/app1/values/staging/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app1",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "fileMatch": ["charts/app1/values/prod/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app1",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "fileMatch": ["charts/app2/values/staging/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app2",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "fileMatch": ["charts/app2/values/prod/.+\\.ya?ml$"],
+      "matchStrings": [
+        "tag:\\s*['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ghcr.io/benhesketh21/app2",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
     }
   ],
   "docker": {

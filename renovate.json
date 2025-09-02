@@ -12,8 +12,7 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "ghcr.io/benhesketh21/app1",
-      "versioningTemplate": "loose",
-      "pinDigests": true
+      "versioningTemplate": "loose"
     },
     {
       "fileMatch": ["charts/app2/values/test/.+\\.ya?ml$"],
@@ -22,10 +21,12 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "ghcr.io/benhesketh21/app2",
-      "versioningTemplate": "loose",
-      "pinDigests": true
+      "versioningTemplate": "loose"
     }
   ],
+  "docker": {
+    "pinDigests": true
+  },
   "ignorePaths": [
     "**/node_modules/**",
     "**/bower_components/**",

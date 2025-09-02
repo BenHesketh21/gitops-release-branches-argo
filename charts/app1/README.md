@@ -5,6 +5,6 @@ To hydrate the manifests in this repository, run the following commands:
 ```shell
 git clone https://github.com/BenHesketh21/gitops-release-branches-argo
 # cd into the cloned directory
-git checkout 9acdf14bc0245dde37adbfe627db22ea4c2687c4
+git checkout 90e3f34f55b301d626c480799a816c5d00715f8b
 helm template . --name-template tenant1-app1 --values ./charts/app1/values.yaml --values ./charts/app1/values/test/base.yml --values ./charts/app1/values/test/main/tenant1/version.yml --include-crds
 ```
